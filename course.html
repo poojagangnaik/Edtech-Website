@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course – Meridian Academy</title>
+  <meta name="description" content="Detailed course page for Meridian Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+  <!-- NAV (identical to main site) -->
+  <nav class="nav-wrapper" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="window.location.href='index.html'" role="button" tabindex="0" aria-label="Meridian Academy Home">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M10 2L2 6v4c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V6L10 2zm0 3l5 2.5v3c0 3.2-2.1 6.2-5 7.5-2.9-1.3-5-4.3-5-7.5v-3L10 5z"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">Meridian <span>Academy</span></div>
+      </div>
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Courses</a></li>
+        <li role="none"><a href="index.html#about" role="menuitem">About</a></li>
+        <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+        <li role="none" class="nav-divider-item"><div class="nav-divider" aria-hidden="true"></div></li>
+        <li role="none"><a href="#" role="menuitem">Sign In</a></li>
+        <li role="none"><button class="nav-cta" id="heroEnrolBtn">Enrol Now</button></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- COURSE HERO -->
+  <section class="cp-hero" id="courseHero">
+    <div class="cp-hero-inner">
+      <div class="cp-hero-left">
+        <div class="cp-breadcrumb">
+          <a href="index.html">Courses</a>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          <span id="cpBreadcrumbCat">Class 12</span>
+        </div>
+
+        <div class="cp-badges" id="cpBadges"></div>
+
+        <h1 id="cpTitle">Course Title</h1>
+        <p class="cp-subtitle" id="cpSubtitle">Loading course details…</p>
+
+        <div class="cp-rating-row">
+          <div class="cp-stars" id="cpStars">★★★★★</div>
+          <span class="cp-rating-num" id="cpRatingNum">4.9</span>
+          <span class="cp-rating-count" id="cpRatingCount">(12,400 ratings)</span>
+          <span class="cp-dot" aria-hidden="true">·</span>
+          <span class="cp-enrolled" id="cpEnrolled">42,000+ students</span>
+        </div>
+
+        <div class="cp-meta-pills">
+          <div class="cp-pill" id="cpDuration">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>10 months</span>
+          </div>
+          <div class="cp-pill" id="cpSessions">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+            <span>120 lectures</span>
+          </div>
+          <div class="cp-pill" id="cpLevel">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18h4v-8H3zM10 18h4V6h-4zM17 18h4v-12h-4z"/></svg>
+            <span>Intermediate</span>
+          </div>
+          <div class="cp-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Certificate included</span>
+          </div>
+        </div>
+
+        <div class="cp-faculty-row">
+          <div class="cp-faculty-avatar av-navy">MK</div>
+          <div>
+            <div class="cp-faculty-label">Faculty</div>
+            <div class="cp-faculty-name">Dr. Manish Kumar, IIT Bombay</div>
+          </div>
+          <div class="cp-faculty-sep" aria-hidden="true"></div>
+          <div class="cp-faculty-avatar av-green">SR</div>
+          <div>
+            <div class="cp-faculty-label">Faculty</div>
+            <div class="cp-faculty-name">Prof. Shalini Rao, AIIMS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky enrol card -->
+      <div class="cp-enrol-card" id="enrolCard">
+        <div class="cp-card-thumb" id="cpCardThumb"></div>
+        <div class="cp-card-body">
+          <div class="cp-price-row">
+            <div class="cp-price" id="cpPrice">₹3,499</div>
+            <div class="cp-price-original" id="cpOriginalPrice">₹6,999</div>
+            <div class="cp-discount-badge" id="cpDiscount">50% OFF</div>
+          </div>
+          <div class="cp-offer-timer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Offer ends in <strong id="offerTimer">11:42:07</strong>
+          </div>
+          <button class="cp-enrol-btn" id="mainEnrolBtn">Enrol Now</button>
+          <button class="cp-trial-btn" id="trialBtn">Try Free Demo</button>
+          <div class="cp-card-features">
+            <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Lifetime access to recordings</div>
+            <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Chapter tests &amp; mock exams</div>
+            <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Doubt resolution within 4 hours</div>
+            <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Certificate of completion</div>
+            <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Mobile &amp; desktop access</div>
+          </div>
+          <div class="cp-emi-note">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            EMI from ₹583/month · Scholarships available
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY ENROL BAR (appears on scroll) -->
+  <div class="cp-sticky-bar" id="stickyBar">
+    <div class="cp-sticky-inner">
+      <div class="cp-sticky-title" id="stickyTitle">Course Title</div>
+      <div class="cp-sticky-meta">
+        <span class="cp-stars-sm" id="stickyStars">★★★★★</span>
+        <span id="stickyRating">4.9</span>
+        <span id="stickyCount">(12,400)</span>
+      </div>
+      <div class="cp-sticky-tabs" id="stickyTabs">
+        <a href="#overview" class="cp-sticky-tab active">Overview</a>
+        <a href="#curriculum" class="cp-sticky-tab">Curriculum</a>
+        <a href="#faculty" class="cp-sticky-tab">Faculty</a>
+        <a href="#reviews" class="cp-sticky-tab">Reviews</a>
+        <a href="#faq-course" class="cp-sticky-tab">FAQ</a>
+      </div>
+      <button class="nav-cta" id="stickyEnrolBtn">Enrol Now</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="cp-main">
+    <div class="cp-content-area">
+
+      <!-- WHAT YOU LEARN -->
+      <section class="cp-section" id="overview">
+        <h2 class="cp-section-title">What you'll learn</h2>
+        <div class="cp-learn-grid" id="learnGrid"></div>
+      </section>
+
+      <!-- COURSE INCLUDES (mobile – shown only below 1024px) -->
+      <section class="cp-section cp-includes-mobile" id="includesMobile">
+        <h2 class="cp-section-title">This course includes</h2>
+        <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Lifetime access to all recordings</div>
+        <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Chapter tests &amp; full mock exams</div>
+        <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Doubt resolution within 4 hours</div>
+        <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Performance analytics &amp; rank prediction</div>
+        <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Certificate of completion</div>
+        <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Mobile &amp; desktop access</div>
+      </section>
+
+      <!-- REQUIREMENTS -->
+      <section class="cp-section">
+        <h2 class="cp-section-title">Requirements</h2>
+        <ul class="cp-req-list" id="reqList"></ul>
+      </section>
+
+      <!-- CURRICULUM -->
+      <section class="cp-section" id="curriculum">
+        <h2 class="cp-section-title">Course curriculum</h2>
+        <div class="cp-curriculum-meta" id="curriculumMeta">Loading…</div>
+        <div class="cp-curriculum" id="curriculumList"></div>
+      </section>
+
+      <!-- FACULTY -->
+      <section class="cp-section" id="faculty">
+        <h2 class="cp-section-title">Your faculty</h2>
+        <div class="cp-faculty-cards" id="facultyCards"></div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="cp-section" id="reviews">
+        <h2 class="cp-section-title">Student reviews</h2>
+        <div class="cp-reviews-summary">
+          <div class="cp-review-big" id="reviewBig">4.9</div>
+          <div class="cp-review-right">
+            <div class="cp-review-stars" id="reviewStars">★★★★★</div>
+            <div class="cp-review-label">Course rating</div>
+          </div>
+        </div>
+        <div class="cp-reviews-grid" id="reviewsGrid"></div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="cp-section" id="faq-course">
+        <h2 class="cp-section-title">Frequently asked questions</h2>
+        <div class="cp-faq-list" id="courseFaqList"></div>
+      </section>
+
+    </div>
+    <!-- Spacer for sticky card on desktop -->
+    <div class="cp-sidebar-spacer"></div>
+  </div>
+
+  <!-- ENROL MODAL -->
+  <div class="cp-modal-overlay" id="enrolModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="cp-modal">
+      <button class="cp-modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div class="cp-modal-header">
+        <div class="cp-modal-icon">🎓</div>
+        <h2 id="modalTitle">Confirm Enrolment</h2>
+        <p id="modalCourseName">Physics – Class 12</p>
+      </div>
+      <div class="cp-modal-body">
+        <div class="cp-modal-price-row">
+          <span class="cp-modal-price" id="modalPrice">₹3,499</span>
+          <span class="cp-modal-original" id="modalOriginal">₹6,999</span>
+        </div>
+        <div class="cp-modal-features">
+          <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Lifetime access</div>
+          <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>30-day refund guarantee</div>
+          <div class="cp-cf-item"><span class="cp-cf-icon">✓</span>Certificate of completion</div>
+        </div>
+        <button class="cp-enrol-btn" onclick="confirmEnrol()">Proceed to Payment</button>
+        <button class="cp-trial-btn" onclick="closeModal()">Maybe later</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST -->
+  <div class="cp-toast" id="enrolToast" role="alert" aria-live="polite">
+    <span class="cp-toast-icon">🎉</span>
+    <div>
+      <strong>Enrolment confirmed!</strong>
+      <div>Welcome to Meridian Academy. Check your email for access details.</div>
+    </div>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo" onclick="window.location.href='index.html'" role="button" tabindex="0">
+            <div class="nav-logo-mark">
+              <svg viewBox="0 0 20 20" fill="white" aria-hidden="true">
+                <path d="M10 2L2 6v4c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V6L10 2zm0 3l5 2.5v3c0 3.2-2.1 6.2-5 7.5-2.9-1.3-5-4.3-5-7.5v-3L10 5z"/>
+              </svg>
+            </div>
+            <div class="nav-logo-text">Meridian <span>Academy</span></div>
+          </div>
+          <p class="footer-tagline">India's trusted online platform for Class 11, 12, JEE, and NEET preparation.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Courses</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Class 11 – PCM / PCB</a></li>
+            <li><a href="index.html">Class 12 – PCM / PCB</a></li>
+            <li><a href="index.html">JEE Main Preparation</a></li>
+            <li><a href="index.html">NEET UG Preparation</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Institution</div>
+          <ul class="footer-links">
+            <li><a href="index.html">About Meridian</a></li>
+            <li><a href="index.html">Our Faculty</a></li>
+            <li><a href="index.html">Results &amp; Toppers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Doubt Forum</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2024 Meridian Academy Pvt. Ltd.</div>
+        <nav class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Refund Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <div class="cp-mobile-enrol-bar" id="mobileEnrolBar">
+  <div class="cp-mobile-enrol-price">
+    <span class="cp-mobile-price-main" id="mobilePrice">₹3,499</span>
+    <span class="cp-mobile-price-orig" id="mobileOriginalPrice">₹6,999</span>
+    <span class="cp-mobile-discount" id="mobileDiscount">50% OFF</span>
+  </div>
+  <button class="cp-mobile-enrol-btn" id="mobileEnrolBtn">Enrol Now</button>
+</div>
+
+  <script src="script.js"></script>
+  <script src="course.js"></script>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Academy – Class 11, 12 &amp; Competitive Exam Prep</title>
+  <meta name="description" content="India's trusted online platform for Class 11, 12, JEE, and NEET preparation. Concept-first teaching, exam-mapped practice, and real results since 2009.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav class="nav-wrapper" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="showPage('courses')" role="button" tabindex="0" aria-label="Meridian Academy Home">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M10 2L2 6v4c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V6L10 2zm0 3l5 2.5v3c0 3.2-2.1 6.2-5 7.5-2.9-1.3-5-4.3-5-7.5v-3L10 5z"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">Meridian <span>Academy</span></div>
+      </div>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#" id="nav-courses" class="active" role="menuitem" onclick="showPage('courses');return false;">Courses</a></li>
+        <li role="none"><a href="#" id="nav-about"   role="menuitem" onclick="showPage('about');return false;">About</a></li>
+        <li role="none"><a href="#" id="nav-contact" role="menuitem" onclick="showPage('contact');return false;">Contact</a></li>
+        <li role="none" class="nav-divider-item"><div class="nav-divider" aria-hidden="true"></div></li>
+        <li role="none"><a href="#" role="menuitem">Sign In</a></li>
+        <li role="none"><button class="nav-cta" onclick="showPage('courses')" aria-label="Enrol Now">Enrol Now</button></li>
+      </ul>
+
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE: COURSES
+  ═══════════════════════════════════════════════ -->
+  <div class="page active" id="page-courses">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+
+        <div class="hero-left">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Class 11, 12 &amp; Competitive Exam Prep
+          </div>
+          <h1 id="hero-heading">Score Higher in Boards, <em>Crack</em> JEE &amp; NEET</h1>
+          <p class="hero-desc">Meridian Academy delivers structured, concept-first courses for Class 11 &amp; 12 students targeting CBSE Boards, JEE Main, JEE Advanced, and NEET UG — taught by IITians and subject matter experts.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('courses-start').scrollIntoView({behavior:'smooth'})">
+              Browse Courses
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn-outline-white">Download Free Study Plan</button>
+          </div>
+          <div class="hero-stats" role="list" aria-label="Key statistics">
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-num">1,20,000+</div>
+              <div class="hero-stat-label">Students Enrolled</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-num">4,200+</div>
+              <div class="hero-stat-label">JEE &amp; NEET Selections</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="hero-stat-num">94%</div>
+              <div class="hero-stat-label">Board Pass Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Feature Card -->
+        <div class="hero-card" aria-label="Why students choose Meridian Academy">
+          <div class="hero-card-title">Why Students Choose Meridian Academy</div>
+          <ul class="hero-features" role="list">
+            <li class="hero-feature-item">
+              <div class="hcm-icon hcm-green" aria-hidden="true">✓</div>
+              <div>
+                <div class="hcm-title">Concept-First Teaching</div>
+                <div class="hcm-meta">Build deep understanding, not shortcuts</div>
+              </div>
+            </li>
+            <li class="hero-feature-item">
+              <div class="hcm-icon hcm-blue" aria-hidden="true">✓</div>
+              <div>
+                <div class="hcm-title">Weekly Tests &amp; Analytics</div>
+                <div class="hcm-meta">Track progress chapter by chapter</div>
+              </div>
+            </li>
+            <li class="hero-feature-item">
+              <div class="hcm-icon hcm-navy" aria-hidden="true">✓</div>
+              <div>
+                <div class="hcm-title">IITian &amp; Expert Faculty</div>
+                <div class="hcm-meta">Learn from proven subject specialists</div>
+              </div>
+            </li>
+            <li class="hero-feature-item">
+              <div class="hcm-icon hcm-green" aria-hidden="true">✓</div>
+              <div>
+                <div class="hcm-title">Doubt Resolution Support</div>
+                <div class="hcm-meta">Fast responses with detailed explanations</div>
+              </div>
+            </li>
+            <li class="hero-feature-item">
+              <div class="hcm-icon hcm-blue" aria-hidden="true">✓</div>
+              <div>
+                <div class="hcm-title">Exam-Mapped Preparation</div>
+                <div class="hcm-meta">Aligned to Boards, JEE &amp; NEET patterns</div>
+              </div>
+            </li>
+          </ul>
+          <div class="hero-card-footer">
+            <span>Designed for consistent academic improvement</span>
+            <button class="hero-card-btn" onclick="document.getElementById('courses-start').scrollIntoView({behavior:'smooth'})">
+              Explore Courses
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar" role="complementary" aria-label="Trusted and recognised by">
+      <div class="trust-bar-inner">
+        <div class="trust-label">Trusted &amp; Recognised by</div>
+        <div class="trust-logos" role="list">
+          <div class="trust-logo-item" role="listitem">CBSE</div>
+          <div class="trust-logo-item" role="listitem">NTA</div>
+          <div class="trust-logo-item" role="listitem">ISO 9001</div>
+          <div class="trust-logo-item" role="listitem">IIT Alumni</div>
+          <div class="trust-logo-item" role="listitem">AIIMS Toppers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="categories-bar" id="courses-start" role="navigation" aria-label="Course categories">
+      <div class="categories-inner" id="categoriesRow" role="tablist"></div>
+    </div>
+
+    <!-- COURSES GRID -->
+    <section class="courses-section" aria-labelledby="courses-heading">
+      <div class="container">
+        <div class="courses-toolbar">
+          <p class="courses-count" id="coursesCount" aria-live="polite">Showing <strong>9</strong> courses</p>
+          <div class="courses-sort">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect" onchange="handleSort()">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="courses-grid" id="coursesGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- FEATURES / WHY MERIDIAN -->
+    <section class="features-section" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Why Meridian Academy</div>
+          <h2 class="section-title" id="features-heading">Built for Boards, JEE &amp; NEET Success</h2>
+          <p class="section-sub">Our courses are structured around the actual exam syllabus — not generic content. Every lesson connects theory to exam-pattern questions.</p>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+        <div class="features-grid reveal" role="list">
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">🎓</div>
+            <h3 class="feature-title">IITian &amp; Expert Faculty</h3>
+            <p class="feature-desc">All teachers are IIT/AIIMS graduates or senior subject experts with proven track records of producing top rankers.</p>
+            <div class="feature-count" aria-label="180 plus expert educators">180+</div>
+            <div class="feature-count-label">Expert educators</div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">📝</div>
+            <h3 class="feature-title">Exam-Pattern Questions</h3>
+            <p class="feature-desc">Chapter tests, part tests, and full mock exams mapped to the exact pattern of CBSE, JEE Main, JEE Advanced, and NEET UG.</p>
+            <div class="feature-count" aria-label="50,000 plus practice questions">50,000+</div>
+            <div class="feature-count-label">Practice questions</div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3 class="feature-title">Detailed Performance Analytics</h3>
+            <p class="feature-desc">Chapter-wise accuracy, time-per-question analysis, percentile ranking, and personalised weak-area reports after every test.</p>
+            <div class="feature-count">Weekly</div>
+            <div class="feature-count-label">Progress reports</div>
+          </div>
+          <div class="feature-item" role="listitem">
+            <div class="feature-icon" aria-hidden="true">🙋</div>
+            <h3 class="feature-title">Doubt Resolution</h3>
+            <p class="feature-desc">Ask doubts anytime via our platform. Subject teachers respond within 4 hours on school days with step-by-step explanations.</p>
+            <div class="feature-count" aria-label="Less than 4 hours average response time">&lt; 4h</div>
+            <div class="feature-count-label">Average response time</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Student Results</div>
+          <h2 class="section-title" id="testimonials-heading">Toppers Who Started Here</h2>
+          <p class="section-sub">Hear from students who scored 90%+ in Boards and cracked JEE and NEET with Meridian Academy.</p>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+        <div class="testimonials-grid" id="testimonialsGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-sidebar">
+            <div class="section-header">
+              <div class="section-eyebrow">Frequently Asked</div>
+              <h2 class="section-title" id="faq-heading">Common Questions</h2>
+              <p class="section-sub">Have more questions? Our academic counsellors are ready to help.</p>
+              <div class="section-divider" aria-hidden="true"></div>
+            </div>
+            <div class="faq-contact">
+              <div class="faq-contact-title">Still have questions?</div>
+              <p class="faq-contact-text">Speak with an academic counsellor for guidance on course selection, study plans, and exam strategy.</p>
+              <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
+            </div>
+          </div>
+          <div class="faq-list" id="faqList" role="list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2 id="cta-heading">Begin Your Exam Preparation Today</h2>
+          <p>Enrol in your chosen course and get immediate access to video lectures, practice tests, and your personal academic mentor from day one.</p>
+        </div>
+        <div class="cta-actions">
+      </div>
+    </section>
+
+  </div><!-- /page-courses -->
+
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE: ABOUT
+  ═══════════════════════════════════════════════ -->
+  <div class="page" id="page-about">
+
+    <div class="about-hero">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          About Meridian Academy
+        </div>
+        <h1>Helping Students Score Higher,<br>Every Year Since 2009</h1>
+        <p>Over 1,20,000 Class 11 and 12 students have prepared with Meridian Academy for CBSE Boards, JEE, and NEET. Our results speak for themselves.</p>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-body">
+            <p>Meridian Academy was founded on a belief that quality exam preparation should not depend on geography or the coaching institute you have access to.</p>
+            <p>We build every course around the exam — not the textbook. Our faculty team, comprising IIT and AIIMS graduates alongside experienced school educators, designs content that explicitly bridges NCERT fundamentals with the depth and problem-solving style required by JEE Advanced and NEET UG.</p>
+            <p>Our approach is outcome-focused. We track each student's performance chapter by chapter, identify gaps early, and assign targeted practice rather than generic homework. Doubt resolution is treated as a priority — not an afterthought.</p>
+            <p>We have produced over 4,200 JEE and NEET selections, including students who secured ranks inside the top 500 in JEE Advanced. We publish our results annually with full transparency.</p>
+            <p>Whether you are a Class 11 student planning two years ahead, a Class 12 student managing board pressure alongside entrance exams, or a dropper targeting a rank improvement, our courses are structured to meet you where you are.</p>
+          </div>
+          <div class="about-sidebar-card" aria-label="Key figures">
+            <h3>Key Figures</h3>
+            <div class="about-number-row">
+              <div><div class="about-num">1,20,000+</div><div class="about-num-label">Students enrolled</div></div>
+            </div>
+            <div class="about-number-row">
+              <div><div class="about-num">4,200+</div><div class="about-num-label">JEE &amp; NEET selections</div></div>
+            </div>
+            <div class="about-number-row">
+              <div><div class="about-num">94%</div><div class="about-num-label">Board pass rate (90%+)</div></div>
+            </div>
+            <div class="about-number-row">
+              <div><div class="about-num">180+</div><div class="about-num-label">Expert faculty members</div></div>
+            </div>
+            <div class="about-number-row">
+              <div><div class="about-num">15</div><div class="about-num-label">Years of results</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header reveal">
+          <div class="section-eyebrow">Our Values</div>
+          <h2 class="section-title">The Principles That Guide Us</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="values-grid reveal" role="list">
+          <div class="value-card" role="listitem">
+            <h3><span class="value-dot" aria-hidden="true"></span>Concept First</h3>
+            <p>We never teach shortcuts before concepts. Every chapter builds understanding from first principles so students can tackle any exam variation, not just familiar question types.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <h3><span class="value-dot" aria-hidden="true"></span>Exam-Mapped Content</h3>
+            <p>Every lecture, test, and assignment is explicitly aligned to CBSE, JEE Main, JEE Advanced, or NEET UG patterns. Students always know exactly what they are preparing for.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <h3><span class="value-dot" aria-hidden="true"></span>Data-Driven Progress</h3>
+            <p>We track performance at the question level. Weak chapters are identified automatically and targeted practice is assigned before they become gaps at exam time.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <h3><span class="value-dot" aria-hidden="true"></span>Accessible to All</h3>
+            <p>Quality preparation should not be limited to students in big cities or those who can afford premium offline coaching. Our courses are priced to be genuinely accessible.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <h3><span class="value-dot" aria-hidden="true"></span>Doubt Resolution</h3>
+            <p>Unresolved doubts compound into bigger gaps. Our faculty responds to every doubt within 4 hours on school days with detailed, personalised explanations.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <h3><span class="value-dot" aria-hidden="true"></span>Transparent Results</h3>
+            <p>We publish our selection data annually — rank-wise, subject-wise, and college-wise. We do not inflate or cherry-pick. Our students deserve to see honest numbers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cta-section">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Ready to Start Preparing?</h2>
+          <p>Browse our full course catalogue for Class 11, Class 12, JEE, and NEET preparation.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-white" onclick="showPage('courses')">Browse Courses</button>
+          <button class="btn-outline-white2" onclick="showPage('contact')">Talk to a Counsellor</button>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-about -->
+
+
+  <!-- ═══════════════════════════════════════════════
+       PAGE: CONTACT
+  ═══════════════════════════════════════════════ -->
+  <div class="page" id="page-contact">
+
+    <div class="contact-hero">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Get in Touch
+        </div>
+        <h1>Contact Our Academic Counsellors</h1>
+        <p>Our counsellors are available Monday to Saturday to help you choose the right course, build a study plan, and answer any questions about enrolment.</p>
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info-card" aria-label="Contact details">
+            <h3>Contact Details</h3>
+            <div class="contact-row">
+              <div class="contact-row-label">Admissions</div>
+              <div class="contact-row-val"><a href="mailto:admissions@meridianacademy.in">admissions@meridianacademy.in</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-row-label">Phone</div>
+              <div class="contact-row-val"><a href="tel:+919876543210">+91 98765 43210</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-row-label">Hours</div>
+              <div class="contact-row-val">Mon–Sat, 08:00–20:00 IST</div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-row-label">WhatsApp</div>
+              <div class="contact-row-val"><a href="#">+91 98765 43210</a></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-row-label">Response Time</div>
+              <div class="contact-row-val">Within 2 working hours</div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <div class="form-title">Send an Enquiry</div>
+            <p class="form-sub">Our academic team will respond within 2 hours on school days.</p>
+            <form id="contactForm" onsubmit="submitContact(event)" novalidate>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="studentName">Student Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="studentName" name="studentName" placeholder="Arjun Sharma" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="parentName">Parent / Guardian Name</label>
+                  <input type="text" id="parentName" name="parentName" placeholder="Rajesh Sharma" autocomplete="name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="emailAddr">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="emailAddr" name="email" placeholder="arjun@email.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phoneNum">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phoneNum" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="currentClass">Current Class <span aria-hidden="true">*</span></label>
+                <select id="currentClass" name="class">
+                  <option value="">Select class…</option>
+                  <option value="class11">Class 11 (Starting)</option>
+                  <option value="class12">Class 12 (Current)</option>
+                  <option value="dropper">Dropper / Repeater</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="targetExam">Target Exam</label>
+                <select id="targetExam" name="target">
+                  <option value="">Select target…</option>
+                  <option value="jee-main">JEE Main only</option>
+                  <option value="jee-adv">JEE Main + Advanced (IIT)</option>
+                  <option value="neet">NEET UG</option>
+                  <option value="boards">CBSE Boards only</option>
+                  <option value="boards-jee">Boards + JEE/NEET</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your target rank, current preparation status, or any questions…"></textarea>
+              </div>
+              <div class="form-footer">
+                <span class="form-privacy">Your data is handled per our <a href="#">Privacy Policy</a>.</span>
+                <button type="submit" class="btn-primary">
+                  Send Enquiry
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </form>
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+              <div class="form-success-icon" aria-hidden="true">✉️</div>
+              <h3>Enquiry Received</h3>
+              <p>An academic counsellor will contact you at your phone or email within 2 working hours.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /page-contact -->
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo" onclick="showPage('courses')" role="button" tabindex="0" aria-label="Meridian Academy home">
+            <div class="nav-logo-mark">
+              <svg viewBox="0 0 20 20" fill="white" aria-hidden="true">
+                <path d="M10 2L2 6v4c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V6L10 2zm0 3l5 2.5v3c0 3.2-2.1 6.2-5 7.5-2.9-1.3-5-4.3-5-7.5v-3L10 5z"/>
+              </svg>
+            </div>
+            <div class="nav-logo-text">Meridian <span>Academy</span></div>
+          </div>
+          <p class="footer-tagline">India's trusted online platform for Class 11, 12, JEE, and NEET preparation. Concept-first teaching, exam-mapped practice, and real results since 2009.</p>
+          <div class="footer-accred">🏫 4,200+ JEE &amp; NEET Selections</div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Courses</div>
+          <ul class="footer-links">
+            <li><a href="#">Class 11 – PCM / PCB</a></li>
+            <li><a href="#">Class 12 – PCM / PCB</a></li>
+            <li><a href="#">JEE Main Preparation</a></li>
+            <li><a href="#">JEE Advanced (IIT)</a></li>
+            <li><a href="#">NEET UG Preparation</a></li>
+            <li><a href="#">Dropper Batch</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Institution</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="showPage('about');return false;">About Meridian</a></li>
+            <li><a href="#">Our Faculty</a></li>
+            <li><a href="#">Results &amp; Toppers</a></li>
+            <li><a href="#">Study Materials</a></li>
+            <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Doubt Forum</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Test Schedule</a></li>
+            <li><a href="#">EMI &amp; Scholarships</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2024 Meridian Academy Pvt. Ltd. Results data is from 2023–24 academic year. Individual results may vary.</div>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Refund Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
